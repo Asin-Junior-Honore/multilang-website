@@ -1,5 +1,3 @@
-
-
 # Multi-Language Website
 
 Welcome to the Multi-Language Website project! This project demonstrates how to create a website with dynamic language support using NestJS and static assets. It allows users to switch between different languages and displays content based on their selection.
@@ -14,10 +12,10 @@ Welcome to the Multi-Language Website project! This project demonstrates how to 
 6. [JSON Translation Files](#json-translation-files)
 7. [Contributing](#contributing)
 
-
 ## Project Overview
 
 This project is a demonstration of a multi-language website with the following features:
+
 - **Dynamic Language Switching:** Users can select their preferred language from a dropdown menu.
 - **Content Translation:** Content on the website is dynamically updated based on the selected language.
 - **JSON-based Localization:** Translations are managed using JSON files, making it easy to add or update content.
