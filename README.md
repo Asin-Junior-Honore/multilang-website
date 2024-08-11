@@ -13,8 +13,7 @@ Welcome to the Multi-Language Website project! This project demonstrates how to 
 5. [Folder Structure](#folder-structure)
 6. [JSON Translation Files](#json-translation-files)
 7. [Contributing](#contributing)
-8. [License](#license)
-9. [Acknowledgments](#acknowledgments)
+
 
 ## Project Overview
 
@@ -137,11 +136,5 @@ We welcome contributions to improve this project! If you have suggestions or fin
 3. Make your changes and commit them (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
-
-
-## Acknowledgments
-
-- **NestJS:** Framework used for building the backend of the application.
-- **Country Flags API:** Used for displaying country flags in the language selector dropdown.
 
 ---
