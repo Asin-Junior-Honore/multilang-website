@@ -1,0 +1,18 @@
+{
+  "PAGE_TITLE": "Bienvenido a nuestro sitio web",
+  "HOME": "Inicio",
+  "ABOUT": "Sobre Nosotros",
+  "CONTACT": "Contáctanos",
+  "SECTION_TITLE": "Bienvenido a nuestro sitio web",
+  "SECTION_CONTENT": "Esta es una sección de texto de ejemplo. Será reemplazada por el contenido traducido según el idioma seleccionado.",
+  "HOME_CONTENT": "¡Bienvenido a nuestra página de inicio! Aquí encontrarás las últimas actualizaciones e información sobre nuestros servicios.",
+  "ABOUT_CONTENT": "Sobre nosotros: Somos una empresa dedicada a brindar los mejores servicios a nuestros clientes. Nuestro equipo de profesionales está aquí para ayudarte con todas tus necesidades.",
+  "CONTACT_CONTENT": "Contáctanos: No dudes en comunicarte con nosotros a través de nuestro formulario de contacto o envíanos un correo electrónico directamente a contacto@nuestrawebsite.com.",
+  "TESTIMONIALS_TITLE": "Testimonios",
+  "TESTIMONIAL_1": "Juan Pérez: 'Excelente servicio. La atención al cliente es inmejorable y los resultados superaron nuestras expectativas.'",
+  "TESTIMONIAL_2": "María López: 'Recomiendo encarecidamente esta empresa. Profesionales y eficientes en todo momento.'",
+  "RESOURCES_TITLE": "Recursos",
+  "RESOURCE_1": "Guía de Inicio Rápido: Encuentra toda la información necesaria para comenzar con nuestros servicios.",
+  "RESOURCE_2": "Preguntas Frecuentes: Resuelve tus dudas con nuestras respuestas a las preguntas más comunes.",
+  "RESOURCE_3": "Blog: Lee nuestros artículos más recientes y mantente informado sobre las novedades."
+}

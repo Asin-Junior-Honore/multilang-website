@@ -1,0 +1,18 @@
+{
+  "PAGE_TITLE": "Welcome to Our Website",
+  "HOME": "Home",
+  "ABOUT": "About Us",
+  "CONTACT": "Contact Us",
+  "SECTION_TITLE": "Welcome to Our Website",
+  "SECTION_CONTENT": "This is a sample text section. It will be replaced by the translated content based on the selected language.",
+  "HOME_CONTENT": "Welcome to our homepage! Here you'll find the latest updates and information about our services.",
+  "ABOUT_CONTENT": "About Us: We are a company dedicated to providing the best services to our clients. Our team of professionals is here to help you with all your needs.",
+  "CONTACT_CONTENT": "Contact Us: Feel free to reach out to us through our contact form or email us directly at contact@ourwebsite.com.",
+  "TESTIMONIALS_TITLE": "Testimonials",
+  "TESTIMONIAL_1": "John Doe: 'Excellent service. The customer care is unmatched, and the results exceeded our expectations.'",
+  "TESTIMONIAL_2": "Jane Smith: 'I highly recommend this company. Professional and efficient at all times.'",
+  "RESOURCES_TITLE": "Resources",
+  "RESOURCE_1": "Quick Start Guide: Find all the necessary information to get started with our services.",
+  "RESOURCE_2": "Frequently Asked Questions: Resolve your doubts with our answers to the most common questions.",
+  "RESOURCE_3": "Blog: Read our latest articles and stay updated on the latest news."
+}
