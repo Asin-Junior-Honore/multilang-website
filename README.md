@@ -1,73 +1,154 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+Certainly! Here's a detailed and comprehensive README template for your multi-language website project:
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Multi-Language Website
 
-## Description
+Welcome to the Multi-Language Website project! This project demonstrates how to create a website with dynamic language support using NestJS and static assets. It allows users to switch between different languages and displays content based on their selection.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Folder Structure](#folder-structure)
+6. [JSON Translation Files](#json-translation-files)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Acknowledgments](#acknowledgments)
+
+## Project Overview
+
+This project is a demonstration of a multi-language website with the following features:
+- **Dynamic Language Switching:** Users can select their preferred language from a dropdown menu.
+- **Content Translation:** Content on the website is dynamically updated based on the selected language.
+- **JSON-based Localization:** Translations are managed using JSON files, making it easy to add or update content.
+
+## Features
+
+- **Language Selector:** A dropdown menu allows users to switch between English, French, and Spanish.
+- **Dynamic Content Update:** Content on the home, about, and contact pages updates based on the selected language.
+- **Simple Styling:** Basic CSS styling for a clean and user-friendly interface.
+- **Responsive Design:** The website is designed to be accessible and usable on various devices.
 
 ## Installation
 
-```bash
-$ npm install
+To set up and run this project locally, follow these steps:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/multilang-website.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd multilang-website
+   ```
+
+3. **Install Dependencies:**
+
+   If you are using Node.js for backend development, make sure to install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the Application:**
+
+   To start the application, use:
+
+   ```bash
+   npm start
+   ```
+
+   The application should now be running at `http://localhost:3000`.
+
+## Usage
+
+1. **Access the Website:**
+
+   Open your web browser and navigate to `http://localhost:3000`.
+
+2. **Select a Language:**
+
+   Use the dropdown menu to choose your preferred language. The content on the page will update automatically based on the selected language.
+
+3. **Navigate to Different Pages:**
+
+   Use the navigation links to visit different pages (home, about, contact). The selected language will persist across page navigations.
+
+## Folder Structure
+
+```
+/multilang-website
+|-- /public
+|   |-- /flags
+|       |-- us.png
+|       |-- fr.png
+|       |-- es.png
+|-- /src
+|   |-- /controllers
+|   |-- /services
+|   |-- /translations
+|       |-- en.json
+|       |-- fr.json
+|       |-- es.json
+|   |-- main.ts
+|-- /views
+|   |-- home.html
+|   |-- about.html
+|   |-- contact.html
+|-- .gitignore
+|-- package.json
+|-- README.md
 ```
 
-## Running the app
+## JSON Translation Files
 
-```bash
-# development
-$ npm run start
+Translation files are stored in the `/src/translations` directory. Each JSON file contains translations for a specific language. The structure of these files is as follows:
 
-# watch mode
-$ npm run start:dev
+- `en.json`: Contains English translations.
+- `fr.json`: Contains French translations.
+- `es.json`: Contains Spanish translations.
 
-# production mode
-$ npm run start:prod
+Example `en.json`:
+
+```json
+{
+  "PAGE_TITLE": "Welcome to Our Website",
+  "HOME": "Home",
+  "ABOUT": "About Us",
+  "CONTACT": "Contact Us",
+  "SECTION_TITLE": "Welcome to Our Website",
+  "SECTION_CONTENT": "This is a sample text section. It will be replaced by translated content based on the selected language.",
+  "HOME_CONTENT": "Welcome to our homepage! Here you will find the latest updates and information about our services.",
+  "ABOUT_CONTENT": "About us: We are a company dedicated to providing the best services to our clients. Our team of professionals is here to assist you with all your needs.",
+  "CONTACT_CONTENT": "Contact us: Feel free to reach out via our contact form or email us directly at contact@ourwebsite.com."
+}
 ```
 
-## Test
+## Contributing
 
-```bash
-# unit tests
-$ npm run test
+We welcome contributions to improve this project! If you have suggestions or find bugs, please follow these steps:
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new Pull Request.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- **NestJS:** Framework used for building the backend of the application.
+- **Country Flags API:** Used for displaying country flags in the language selector dropdown.
+
+---
+
+Feel free to modify any sections based on your project's specific details or requirements!
