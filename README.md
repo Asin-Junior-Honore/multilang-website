@@ -1,6 +1,4 @@
-Certainly! Here's a detailed and comprehensive README template for your multi-language website project:
 
----
 
 # Multi-Language Website
 
@@ -140,9 +138,6 @@ We welcome contributions to improve this project! If you have suggestions or fin
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -150,5 +145,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Country Flags API:** Used for displaying country flags in the language selector dropdown.
 
 ---
-
-Feel free to modify any sections based on your project's specific details or requirements!
