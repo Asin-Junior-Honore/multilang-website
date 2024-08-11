@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Multi-Language Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        label {
+            font-size: 1.1em;
+            color: #555;
+        }
+        select {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .flag {
+            width: 24px;
+            height: 16px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .language-option {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+        }
+        .translations {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .translation-item {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-top: 30px;
+            color: #222;
+        }
+        .section-content {
+            margin: 20px 0;
+        }
+        .testimonials, .resources {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="pageTitle"></h1>
+        <label for="languageSelect">Choose a language:</label>
+        <select id="languageSelect">
+            <option value="en" class="language-option">
+                <img src="https://www.countryflags.io/us/flat/32.png" alt="English" class="flag"> English
+            </option>
+            <option value="fr" class="language-option">
+                <img src="https://www.countryflags.io/fr/flat/32.png" alt="French" class="flag"> Français
+            </option>
+            <option value="es" class="language-option">
+                <img src="https://www.countryflags.io/es/flat/32.png" alt="Spanish" class="flag"> Español
+            </option>
+        </select>
+        <div id="translations" class="translations"></div>
+    </div>
+
+    <script>
+        document.getElementById('languageSelect').addEventListener('change', async function() {
+            const lang = this.value;
+            const response = await fetch(`/translate/${lang}`);
+            const translations = await response.json();
+
+            // Update page title
+            document.getElementById('pageTitle').textContent = translations.PAGE_TITLE || '';
+
+            // Update content
+            const translationsDiv = document.getElementById('translations');
+            translationsDiv.innerHTML = '';
+
+            // Section Content
+            const sectionTitle = document.createElement('h2');
+            sectionTitle.className = 'section-title';
+            sectionTitle.textContent = translations.SECTION_TITLE || '';
+            translationsDiv.appendChild(sectionTitle);
+
+            const sectionContent = document.createElement('p');
+            sectionContent.className = 'section-content';
+            sectionContent.textContent = translations.SECTION_CONTENT || '';
+            translationsDiv.appendChild(sectionContent);
+
+            // Home Content
+            const homeContent = document.createElement('p');
+            homeContent.className = 'translation-item';
+            homeContent.textContent = translations.HOME_CONTENT || '';
+            translationsDiv.appendChild(homeContent);
+
+            // About Content
+            const aboutContent = document.createElement('p');
+            aboutContent.className = 'translation-item';
+            aboutContent.textContent = translations.ABOUT_CONTENT || '';
+            translationsDiv.appendChild(aboutContent);
+
+            // Contact Content
+            const contactContent = document.createElement('p');
+            contactContent.className = 'translation-item';
+            contactContent.textContent = translations.CONTACT_CONTENT || '';
+            translationsDiv.appendChild(contactContent);
+
+            // Testimonials
+            const testimonialsTitle = document.createElement('h2');
+            testimonialsTitle.className = 'section-title';
+            testimonialsTitle.textContent = translations.TESTIMONIALS_TITLE || 'Testimonials';
+            translationsDiv.appendChild(testimonialsTitle);
+
+            for (let i = 1; i <= 2; i++) {
+                const testimonial = document.createElement('p');
+                testimonial.className = 'translation-item';
+                testimonial.textContent = translations[`TESTIMONIAL_${i}`] || '';
+                translationsDiv.appendChild(testimonial);
+            }
+
+            // Resources
+            const resourcesTitle = document.createElement('h2');
+            resourcesTitle.className = 'section-title';
+            resourcesTitle.textContent = translations.RESOURCES_TITLE || 'Resources';
+            translationsDiv.appendChild(resourcesTitle);
+
+            for (let i = 1; i <= 3; i++) {
+                const resource = document.createElement('p');
+                resource.className = 'translation-item';
+                resource.textContent = translations[`RESOURCE_${i}`] || '';
+                translationsDiv.appendChild(resource);
+            }
+        });
+
+        // Initial load
+        document.getElementById('languageSelect').dispatchEvent(new Event('change'));
+    </script>
+</body>
+</html>
